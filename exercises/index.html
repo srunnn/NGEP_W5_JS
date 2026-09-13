@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Week 5 — Browser Events Practice</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 640px; margin: 40px auto; }
+    #hover-box { width: 200px; height: 100px; background: lightgray; text-align: center;
+      line-height: 100px; margin: 12px 0; }
+    ul#task-list { list-style: none; padding: 0; }
+    ul#task-list li { padding: 8px; border: 1px solid #ddd; margin-bottom: 4px;
+      cursor: pointer; }
+    ul#task-list li.done { text-decoration: line-through; color: gray; }
+  </style>
+</head>
+<body>
+  <h1>Week 5 — Browser Events Practice</h1>
+
+  <h2>1. Basic handlers</h2>
+  <button id="basic-btn">Click me</button>
+  <p></p>
+  <button id="outer-btn" onclick="alert('HTML attribute handler fired!')">
+    HTML-attribute handler
+  </button>
+
+  <h2>2. Listeners</h2>
+  <div id="hover-box">Hover over me</div>
+  <input id="text-input" type="text" placeholder="Type here (keydown/focus practice)" />
+  <button id="remove-listener-btn">Remove the click listener below</button>
+  <button id="listener-btn">This has an addEventListener click handler</button>
+
+  <form id="demo-form">
+    <input type="text" id="form-input" placeholder="Say something" />
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>3. Event delegation</h2>
+  <ul id="task-list">
+    <li>Buy groceries</li>
+    <li>Finish homework</li>
+    <li>Walk the dog</li>
+    <li><button id="add-task-btn">+ Add Task</button></li>
+  </ul>
+
+  <script src="01-event-handlers.js"></script>
+  <script src="02-event-listeners.js"></script>
+  <script src="03-event-delegation.js"></script>
+</body>
+</html>
