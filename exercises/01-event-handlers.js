@@ -6,12 +6,20 @@ const basicBtn = document.getElementById("basic-btn");
 
 // TODO 1: Set basicBtn.onclick to a function that logs "Basic button clicked!"
 // (this is the "DOM property" handler style; only ONE handler allowed per property).
-
+basicBtn.onclick = function() {
+    console.log("Basic button clicked!");
+};
 
 // TODO 2: Overwrite basicBtn.onclick with a DIFFERENT function. Click the button and
 // notice only the SECOND handler runs; assigning .onclick again replaces the first.
-
+basicBtn.onclick = function() {
+    console.log("Basic button clicked again!");
+}
 
 // TODO 3: In a comment, write one sentence explaining why using .onclick (or the HTML
 // onclick="" attribute) is more limited than addEventListener (hint: think about how
 // many handlers each one can hold we'll fix this in the next exercise!).
+
+// .onclick and the HTML onclick="" attribute can only hold one event handler at a time, 
+// so assigning a new handler will overwrite the previous one, while addEventListener 
+// allows multiple handlers for the same event.
